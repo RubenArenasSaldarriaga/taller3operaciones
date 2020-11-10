@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Taller 3 - Operaciones</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+</head>
+<body>
+	<h1 style="text-align: center;">Taller 3 - Operaciones</h1>
+	<hr>
+	<input type="number" id="val1">
+	<input type="number" id="val2">
+	<button type="button" onclick="operaciontaller2('sumar');">+</button>
+	<button type="button" onclick="operaciontaller2('restar');">-</button>
+	<button type="button" onclick="operaciontaller2('multiplicar');">*</button>
+	<button type="button" onclick="operaciontaller2('dividir');">/</button>
+	<hr>
+	<div class="resultado"></div>
+	<script type="text/javascript">
+		function operaciontaller2(param){
+			var input1 = document.getElementById('val1').value;
+			var input2 = document.getElementById('val2').value;
+			console.log(input1);
+			console.log(input2);
+			var resultado = document.getElementById('resultado');
+			//esta parte la puede operar un switch
+			switch(param){
+				case "sumar":
+					total = (parseInt(input1)  + parseInt(input2));
+					break;
+				case "restar":
+					total = (parseInt(input1)  - parseInt(input2));
+					break;
+				case "multiplicar":
+					total = (parseInt(input1)  * parseInt(input2));
+					break;
+				case "dividir":
+					total = (parseInt(input1)  / parseInt(input2));
+					break;
+				default:
+					total = "parametro no valido";
+					break;
+			}
+			console.log(total);
+			alert(total);
+		}
+
+	</script>
+</body>
+</html>
